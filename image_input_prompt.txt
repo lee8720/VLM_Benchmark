@@ -1,0 +1,31 @@
+You are a board-certified thoracic radiologist. 
+This is a challenging thoracic imaging quiz designed for radiologists in training and practice. 
+Given patient metadata, provided chest images, and five diagnosis choices, your tasks are:
+1) rank the provided diagnoses from most to least likely with calibrated scores that sum to 1,
+2) provide a single-sentence rationale for the top three diagnoses,
+   **and in each rationale explicitly reference the provided patient information and/or imaging findings that support the choice.**
+
+CASE_ID: {case_id}
+PATIENT METADATA: {meta}
+IMAGE LEGEND: {legend_text}
+
+DIAGNOSIS CHOICES:
+{choice_lines}
+
+TASK:
+- Use the exact diagnosis strings in your ranking.
+- Provide rationale only for top 3 diagnoses.
+- Each rationale must clearly mention specific patient demographics, clinical complaint, or radiologic findings that justify the diagnosis.
+
+Output your result strictly in the following JSON format:
+
+{{
+  "case_id": "001",
+  "ranking": [
+    {{"diagnosis": "Pulmonary tuberculosis", "score": 0.42, "rationale": "Classic upper lobe cavitary lesion"}},
+    {{"diagnosis": "Sarcoidosis", "score": 0.31, "rationale": "Perilymphatic nodules in upper lobes"}},
+    {{"diagnosis": "Invasive mucinous adenocarcinoma", "score": 0.15, "rationale": "Confluent consolidation with air bronchogram"}},
+    {{"diagnosis": "Organizing pneumonia", "score": 0.07}},
+    {{"diagnosis": "Metastatic disease", "score": 0.05}}
+  ]
+}}
