@@ -1,7 +1,6 @@
 This repository contains the evaluation resources for the study:
 
-**Evolution of Diagnostic Performance in Vision–Language Models:  
-A 13-Model Evaluation Against Human Readers in Thoracic Imaging**
+**Do Accuracy Gains Reflect Genuine Visual Understanding? A Multi-Model Evaluation of Vision–Language Models in Thoracic Imaging**
 
 ---
 
